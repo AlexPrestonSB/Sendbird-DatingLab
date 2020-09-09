@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sendbird.datinglab.widgets.BounceScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6F7FB"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".fragments.AccountFragment">
+
+
+        <com.github.florent37.shapeofview.shapes.ArcView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            app:shape_arc_height="30dp"
+            app:shape_arc_position="bottom">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/layout_view_center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="240dp"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="4dp"
+                    app:layout_anchorGravity="top|center_horizontal"
+                    app:layout_scrollFlags="scroll" />
+
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Gabriel, 24"
+                    android:textColor="@color/md_black_1000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+
+
+                <TextView
+                    android:id="@+id/profile_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Developer"
+                    android:textColor="@color/md_black_1000"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="64dp"/>
+
+
+            </LinearLayout>
+
+
+        </com.github.florent37.shapeofview.shapes.ArcView>
+
+
+    </RelativeLayout>
+
+</com.sendbird.datinglab.widgets.BounceScrollView>
