@@ -11,12 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.sendbird.android.SendBird;
-import com.sendbird.android.User;
-import com.sendbird.uikit.SendBirdUIKit;
-import com.sendbird.uikit.interfaces.UserInfo;
-import com.smarteist.autoimageslider.SliderView;
 import com.sendbird.datinglab.R;
 
 /**
@@ -45,9 +39,7 @@ public class AccountFragment extends Fragment {
 
 
         //TODO SENDBIRD
-        Glide.with(this).load(SendBird.getCurrentUser().getProfileUrl()).fitCenter().into(profileImage);
-        userName.setText(SendBird.getCurrentUser().getNickname());
-        userInfo.setText("About Me: Likes " + SendBird.getCurrentUser().getMetaData("Likes"));
+
         // END
         return rootLayout;
     }
