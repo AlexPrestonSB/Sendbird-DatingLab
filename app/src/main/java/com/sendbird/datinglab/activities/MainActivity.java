@@ -40,7 +40,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         ArrayList<Fragment> fragList = new ArrayList<>();
         fragList.add(new AccountFragment());
         fragList.add(new SwipeViewFragment());
-        fragList.add(getChatFragment()); //TODO SENDBIRD
+        //TODO SENDBIRD
+
+
         ViewPagerAdapter pagerAdapter = new ViewPagerAdapter(fragList, getSupportFragmentManager());
         viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(pagerAdapter);
@@ -53,17 +55,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
      * @return CustomChannelActivityFragment
      */
     private Fragment getChatFragment() {
-        GroupChannelListQuery query = GroupChannel.createMyGroupChannelListQuery();
-        query.setIncludeEmpty(true);
-        query.setOrder(GroupChannelListQuery.Order.CHRONOLOGICAL);
-
-        ChannelListFragment.Builder builder = new ChannelListFragment.Builder()
-                .setUseHeader(false)
-                .setItemClickListener((view, i, channel)-> showCustomChannelActivity(channel.getUrl()))
-                .setGroupChannelListQuery(query);
-
-        return builder.build();
-
+        return null;
     }
 
     /**
@@ -71,8 +63,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
      * @param channelUrl to launch Custom Channel Activity
      */
     private void showCustomChannelActivity(String channelUrl) {
-        Intent intent = CustomChannelActivity.newIntentFromCustomActivity(this, CustomChannelActivity.class, channelUrl);
-        startActivity(intent);
+
     }
 
     @Override

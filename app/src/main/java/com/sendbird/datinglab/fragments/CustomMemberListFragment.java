@@ -1,6 +1,5 @@
 package com.sendbird.datinglab.fragments;
 
-import com.sendbird.uikit.fragments.MemberListFragment;
+public class CustomMemberListFragment  {
 
-public class CustomMemberListFragment extends MemberListFragment {
 }

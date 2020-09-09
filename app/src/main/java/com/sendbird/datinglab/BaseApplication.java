@@ -18,9 +18,6 @@ import java.util.List;
 
 public class BaseApplication extends Application {
 
-    private String userId;
-    private String userNickname;
-    private final String APP_ID = "C659F842-231B-44B2-92A0-FB92A2328875";
 
     @Override
     public void onCreate() {
@@ -29,45 +26,5 @@ public class BaseApplication extends Application {
         /**
          * TODO SENDBIRD CODE FOR UIKIT HERE
          */
-        SendBirdUIKit.init(new SendBirdUIKitAdapter() {
-            @Override
-            public String getAppId() {
-                return APP_ID;
-            }
-
-            @Override
-            public String getAccessToken() {
-                return "null";
-            }
-
-            @Override
-            public UserInfo getUserInfo() {
-                return new UserInfo() {
-                    @Override
-                    public String getUserId() {
-                        return userId;
-                    }
-
-                    @Override
-                    public String getNickname() {
-                        return userNickname;
-                    }
-
-                    @Override
-                    public String getProfileUrl() {
-                        return "";
-                    }
-                };
-            }
-        }, this);
     }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public void setUserNickname(String userNickname) {
-        this.userNickname = userNickname;
-    }
-
 }

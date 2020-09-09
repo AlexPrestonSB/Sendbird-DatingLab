@@ -30,27 +30,23 @@ public class DatingCard {
     @View(R.id.locationNameTxt)
     private TextView locationNameTxt;
 
-    private User mUser;
+    //TODO SENDBIRD
     private Context mContext;
     private SwipePlaceHolderView mSwipeView;
 
     //TODO SENDBIRD
-    public DatingCard(Context context, User user, SwipePlaceHolderView swipeView) {
+    public DatingCard(Context context, SwipePlaceHolderView swipeView) {
         mContext = context;
-         mUser = user;
         mSwipeView = swipeView;
     }
 
-    public User getUser() {
-        return mUser;
-    }
 
     //END
 
     @Resolve
     private void onResolved(){
-        Glide.with(mContext).load(mUser.getProfileUrl()).into(profileImageView);
-        nameAgeTxt.setText(mUser.getNickname() + ", 25");
+        //TODO SENDBIRD
+        nameAgeTxt.setText("Tim");
         locationNameTxt.setText("San Mateo");
     }
 
